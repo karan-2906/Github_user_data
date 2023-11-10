@@ -68,7 +68,7 @@ const Git = () => {
                         setSearchTerm(e.target.value);
                     }}
                 />
-                <button className="border-2 border-black p-1 px-2 rounded-xl text-lg bg-zinc-600 text-yellow-500" onClick={handlleSearch} >
+                <button className="border-2 border-black p-1 px-2 rounded-xl text-lg bg-zinc-600 text-yellow-500 hover:text-yellow-600 hover:bg-zinc-500" onClick={handlleSearch} >
                     Search
                 </button>
             </div>
