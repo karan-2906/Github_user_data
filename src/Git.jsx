@@ -58,11 +58,11 @@ const Git = () => {
 
 
     return (
-        <div className="text-center align-middle items-center min-h-screen bg-zinc-800 ">
+        <div className="text-center align-middle items-center min-h-screen bg-zinc-800 pb-4">
             <div className="text-3xl font-bold text-yellow-500 pt-4">Github Profile Finder</div>
             <div className="justify-center text-center p-4 flex gap-3">
                 <input
-                    className="border-2 p-2 w-1/4 rounded-lg"
+                    className="border-2 p-2 w-1/2 lg:w-1/4 rounded-lg"
                     placeholder="Search UserName"
                     onChange={(e) => {
                         setSearchTerm(e.target.value);
@@ -73,10 +73,10 @@ const Git = () => {
                 </button>
             </div>
 
-            <div className="flex mt-2 gap-6 justify-center text-white">
+            <div className="flex-row lg:flex mt-2 gap-6 justify-center text-center  text-white">
                 <p className="text-xl">{text}</p>
                 {userData && (
-                    <div className="justify-start font-semibold content-center border-2 p-6 rounded-3xl w-1/5 h-fit ">
+                    <div className="justify-center font-semibold  border-2 p-6 rounded-3xl w-10/12 mx-auto h-fit my-4 lg:w-1/4 lg:mx-1">
                         <h2 className="text-2xl font-bold pb-2 text-yellow-500">{userData.name}</h2>
                         <center>    <img className="w-1/1 pb-2 rounded-full" src={userData.avatar_url} alt={userData.login} />  </center>
                         <p>Username: {userData.login}</p>
@@ -90,7 +90,7 @@ const Git = () => {
                     </div>
                 )}
                 {repositories && (
-                    <div className="font-semibold border-2 p-4 rounded-3xl h-fit mb-4 w-1/4">
+                    <div className="font-semibold border-2 p-4 m-4 rounded-3xl h-fit mb-4 w-11/12 mx-auto lg:w-1/4 lg:mx-1">
                         <h3 className="text-2xl font-bold pb-2 text-yellow-500" >Repositories</h3>
                         <ul>
                             {repositories.map((repo) => (
@@ -102,7 +102,7 @@ const Git = () => {
                     </div>
                 )}
                 {followers && (
-                    <div className="font-semibold border-2 p-4 rounded-3xl mb-4 w-1/6 h-fit">
+                    <div className="font-semibold border-2 p-4  mt-4 rounded-3xl w-4/5 h-fit mx-auto lg:w-1/5 lg:mx-1">
                         <h3 className="text-2xl font-bold pb-2 text-yellow-500">Followers</h3>
                         <ul>
                             {followers.map((follower) => {
